@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Ogunwoye — Robotics & ML Engineer</title>
+<meta name="description" content="Portfolio of Faith Ogunwoye — robotics, machine learning, and blockchain researcher.">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/120261316?v=4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<nav id="navbar">
+  <a href="#home" class="logo">FO<span class="accent">.</span></a>
+  <button id="nav-toggle" aria-label="Menu">☰</button>
+  <ul id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="home" class="hero">
+  <div class="hero-content">
+    <p class="hero-hello reveal">Hi, my name is</p>
+    <h1 class="hero-name reveal">Faith Ogunwoye<span class="accent">.</span></h1>
+    <h2 class="hero-tagline reveal">I'm a <span id="typed"></span><span class="cursor">|</span></h2>
+    <p class="hero-sub reveal">
+      I build autonomous robots, machine-learning systems, and blockchain tools —
+      from ROS 2 simulation of 4WD mobile robots to cross-platform NFT provenance inference.
+    </p>
+    <div class="hero-cta reveal">
+      <a href="#projects" class="btn btn-primary">View my work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-avatar reveal">
+    <div class="avatar-ring">
+      <img src="https://avatars.githubusercontent.com/u/120261316?v=4" alt="Faith Ogunwoye">
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+</header>
+
+<main>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <h2 class="section-title reveal"><span class="section-num">01.</span> About Me</h2>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>
+        I'm a robotics and machine-learning engineer with a background in mechanical /
+        mechatronics engineering, currently focused on autonomous mobile robots,
+        imitation learning, and applied ML research.
+        <!-- TODO: replace with your own 2–3 sentence bio -->
+      </p>
+      <p>
+        My recent work spans <strong>ROS 2 + Gazebo simulation</strong> of 4WD differential-drive
+        robots, <strong>LiDAR-based machine learning</strong>, <strong>imitation learning</strong>,
+        and <strong>NFT provenance inference</strong> for detecting duplicate digital media across
+        blockchain platforms.
+      </p>
+      <p>Technologies I work with:</p>
+      <ul class="tech-list">
+        <li>ROS 2 / Gazebo</li>
+        <li>Python / PyTorch</li>
+        <li>C++</li>
+        <li>MATLAB / Simulink</li>
+        <li>Solidity / Web3</li>
+        <li>Django</li>
+        <li>Computer Vision</li>
+        <li>Control Systems (PID)</li>
+      </ul>
+    </div>
+    <div class="skills reveal">
+      <h3>Core skills</h3>
+      <div class="skill"><div class="skill-head"><span>Robotics & ROS 2</span><span>90%</span></div><div class="bar"><div class="fill" style="--w:90%"></div></div></div>
+      <div class="skill"><div class="skill-head"><span>Machine Learning</span><span>85%</span></div><div class="bar"><div class="fill" style="--w:85%"></div></div></div>
+      <div class="skill"><div class="skill-head"><span>Python</span><span>90%</span></div><div class="bar"><div class="fill" style="--w:90%"></div></div></div>
+      <div class="skill"><div class="skill-head"><span>Control Systems</span><span>80%</span></div><div class="bar"><div class="fill" style="--w:80%"></div></div></div>
+      <div class="skill"><div class="skill-head"><span>Blockchain / Web3</span><span>70%</span></div><div class="bar"><div class="fill" style="--w:70%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <h2 class="section-title reveal"><span class="section-num">02.</span> Projects</h2>
+  <div class="projects-grid">
+
+    <article class="card reveal">
+      <div class="card-media">
+        <!-- TODO: drop a GIF/screenshot at assets/sonata.gif and uncomment -->
+        <!-- <img src="assets/sonata.gif" alt="4WD robot simulation"> -->
+        <div class="media-placeholder">🤖</div>
+      </div>
+      <div class="card-body">
+        <h3>4WD Mobile Robot — ROS 2 Simulation</h3>
+        <p>Full ROS 2 + Gazebo simulation of a 4WD differential-drive robot modeled from real
+           hardware measurements: URDF, control, and navigation stack.</p>
+        <ul class="tags"><li>ROS 2</li><li>Gazebo</li><li>Python</li><li>URDF</li></ul>
+        <div class="card-links"><a href="https://github.com/Adrenaline07/sonata_ws" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media"><div class="media-placeholder">🖼️</div></div>
+      <div class="card-body">
+        <h3>NFT Provenance — Who Minted First</h3>
+        <p>Cross-platform NFT provenance inference for duplicate and near-duplicate digital media:
+           buyer-side duplicate-risk screening with on-chain who-minted-first resolution.</p>
+        <ul class="tags"><li>Python</li><li>Blockchain</li><li>Computer Vision</li></ul>
+        <div class="card-links"><span class="muted">Private research repo</span></div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media"><div class="media-placeholder">🎮</div></div>
+      <div class="card-body">
+        <h3>Imitation Learning</h3>
+        <p>Learning robot behaviors from demonstration — policy training and evaluation
+           for imitation-learning pipelines.</p>
+        <ul class="tags"><li>PyTorch</li><li>RL/IL</li><li>Python</li></ul>
+        <div class="card-links"><a href="https://github.com/Adrenaline07/Imitation_learning" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media"><div class="media-placeholder">📡</div></div>
+      <div class="card-body">
+        <h3>ML on LiDAR Data</h3>
+        <p>Machine-learning models applied to LiDAR point-cloud data for perception tasks.</p>
+        <ul class="tags"><li>Python</li><li>LiDAR</li><li>ML</li></ul>
+        <div class="card-links"><a href="https://github.com/Adrenaline07/ML_LIDAR" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media"><div class="media-placeholder">🚗</div></div>
+      <div class="card-body">
+        <h3>PID Active Suspension System</h3>
+        <p>PID-controlled active suspension modeling and analysis for vehicle dynamics.</p>
+        <ul class="tags"><li>MATLAB</li><li>Control</li><li>Simulink</li></ul>
+        <div class="card-links"><a href="https://github.com/Adrenaline07/PID-Active_Suspension_System" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media"><div class="media-placeholder">🧊</div></div>
+      <div class="card-body">
+        <h3>3D Modeling & Animation</h3>
+        <p>3D modeling and animation coursework and experiments.</p>
+        <ul class="tags"><li>3D</li><li>Animation</li></ul>
+        <div class="card-links"><a href="https://github.com/Adrenaline07/Modeling-and-Animation-3D-" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications" class="section">
+  <h2 class="section-title reveal"><span class="section-num">03.</span> Publications & Research</h2>
+  <div class="pub-list">
+    <article class="pub reveal">
+      <div class="pub-media">
+        <!-- TODO: drop a GIF at assets/pub1.gif and replace the placeholder -->
+        <div class="media-placeholder">📄</div>
+      </div>
+      <div class="pub-body">
+        <h3>Cross-Platform NFT Provenance Inference for Duplicate Digital Media</h3>
+        <p class="pub-meta">In preparation · 2026 <!-- TODO: update venue/status --></p>
+        <p>Buyer-side duplicate-risk screening with on-chain who-minted-first resolution
+           across NFT marketplaces.</p>
+      </div>
+    </article>
+    <article class="pub reveal">
+      <div class="pub-media"><div class="media-placeholder">📄</div></div>
+      <div class="pub-body">
+        <h3>Your next publication title here</h3>
+        <p class="pub-meta"><!-- TODO: venue · year --></p>
+        <p><!-- TODO: one-line abstract --></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CV ============ -->
+<section id="cv" class="section">
+  <h2 class="section-title reveal"><span class="section-num">04.</span> Curriculum Vitae</h2>
+  <div class="cv-actions reveal">
+    <!-- TODO: put your CV PDF at assets/Faith_Ogunwoye_CV.pdf -->
+    <a class="btn btn-primary" href="assets/Faith_Ogunwoye_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+  </div>
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>MSc — Skolkovo Institute of Science and Technology (Skoltech)</h3>
+        <p class="tl-meta"><!-- TODO: program & years, e.g. 2024 – 2026 --></p>
+        <p>Research in robotics, IoT, and machine learning. <!-- TODO --></p>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>Robotics Engineer — Sintez <!-- TODO: adjust title/company --></h3>
+        <p class="tl-meta"><!-- TODO: years --></p>
+        <p>Simulation and control of a 4WD mobile robot platform (ROS 2 + Gazebo). <!-- TODO --></p>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>BSc — <!-- TODO: university --></h3>
+        <p class="tl-meta"><!-- TODO: years --></p>
+        <p><!-- TODO: degree, honors --></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section contact">
+  <h2 class="section-title reveal"><span class="section-num">05.</span> Get In Touch</h2>
+  <p class="reveal">I'm open to research collaborations, robotics/ML roles, and interesting projects.
+     My inbox is always open.</p>
+  <a href="mailto:rawemail094@gmail.com" class="btn btn-primary reveal">Say hello</a>
+  <div class="socials reveal">
+    <a href="https://github.com/Adrenaline07" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+    <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn<!-- TODO: add URL --></a>
+    <a href="#" target="_blank" rel="noopener" aria-label="Google Scholar">Scholar<!-- TODO: add URL --></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Built by Faith Ogunwoye · <a href="https://github.com/Adrenaline07/Adrenaline07.github.io" target="_blank" rel="noopener">Source</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
