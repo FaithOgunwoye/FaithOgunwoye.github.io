@@ -1,6 +1,6 @@
-# Adrenaline07.github.io
+# FaithOgunwoye.github.io
 
-Personal portfolio, live at https://adrenaline07.github.io
+Personal portfolio, live at https://faithogunwoye.github.io
 
 ## How to edit this site
 
