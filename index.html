@@ -97,13 +97,98 @@
 
 <!-- ============ PROJECTS ============ -->
 <section id="projects" class="section">
-  <h2 class="section-title reveal"><span class="section-num">02.</span> Projects</h2>
+  <h2 class="section-title reveal"><span class="section-num">02.</span> Research & Projects</h2>
+  <p class="section-lead reveal">My work asks one question from three directions: how a robot should perceive the parts of the world it is about to touch, when cameras only see part of the scene.</p>
+
+  <div class="feature-list">
+
+    <article class="feature reveal">
+      <div class="feature-media video">
+        <video src="assets/img/teleop.mp4" poster="assets/img/teleop_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Faith teleoperating the dual-arm robot to collect demonstrations"></video>
+      </div>
+      <div class="feature-body">
+        <p class="feature-kicker">HapticVLA · IEEE/RSJ IROS 2026 · Skoltech Top Paper Award</p>
+        <h3>Teaching robots to handle fragile objects</h3>
+        <p>I operated our dual-arm teleoperation rig to collect the real-world demonstrations
+           behind HapticVLA: lifting an egg from a crate, placing waffles and cans into boxes.
+           The policy learns tactile awareness during training and needs no touch sensor at
+           deployment, reaching <strong>86.7% mean success</strong> on real contact-rich tasks.</p>
+        <ul class="tags"><li>Teleoperation</li><li>VLA</li><li>Tactile learning</li><li>Real robots</li></ul>
+        <div class="card-links"><a href="https://arxiv.org/abs/2603.15257" target="_blank" rel="noopener">Paper ↗</a></div>
+      </div>
+    </article>
+
+    <article class="feature reveal">
+      <a class="feature-media" href="assets/img/proj_smell_paths.jpg" target="_blank" rel="noopener"><img src="assets/img/proj_smell_paths.jpg" alt="SmellDiffusion planned paths through a gas concentration field" loading="lazy"></a>
+      <div class="feature-body">
+        <p class="feature-kicker">SmellDiffusion · First author · Under review, IEEE ICRA 2027</p>
+        <h3>Finding a named gas leak with a legged robot</h3>
+        <p>A quadruped is told which gas to find. An open-vocabulary olfactory scene graph keeps
+           each gas's identity and estimated source, and diffusion planning chooses the route
+           through the plume. I led the project and evaluated it across <strong>424 source and
+           wind configurations</strong> with matched Gazebo trials.</p>
+        <ul class="tags"><li>Diffusion planning</li><li>Scene graphs</li><li>Quadruped</li><li>Gazebo</li></ul>
+        <div class="card-links"><a href="https://arxiv.org/abs/2609.20624" target="_blank" rel="noopener">Paper ↗</a></div>
+      </div>
+    </article>
+
+    <article class="feature reveal">
+      <a class="feature-media" href="assets/img/clouddiffusion.jpg" target="_blank" rel="noopener"><img src="assets/img/proj_completion.jpg" alt="Partial LiDAR scan and the completed scene produced by CloudDiffusion" loading="lazy"></a>
+      <div class="feature-body">
+        <p class="feature-kicker">CloudDiffusion · IEEE SMC 2026</p>
+        <h3>3D scene completion from a single camera</h3>
+        <p>LiDAR is expensive, so I built the branch that replaces it with one camera: Depth
+           Anything V2 estimates depth, which I back-project into pseudo-LiDAR for the diffusion
+           model to complete, and then I measured exactly what that substitution costs.</p>
+        <ul class="tags"><li>Point clouds</li><li>Monocular depth</li><li>Diffusion</li><li>SemanticKITTI</li></ul>
+        <div class="card-links">
+          <a href="https://arxiv.org/abs/2606.16048" target="_blank" rel="noopener">Paper ↗</a>
+          <a href="https://github.com/A-C-Simon/sonata_ws" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <h3 class="subsection-title reveal">Engineering foundations</h3>
   <div class="projects-grid">
 
     <article class="card reveal">
-      <div class="card-media">
-        <div class="media-placeholder">🤖</div>
+      <div class="card-media"><div class="media-placeholder">⛽</div></div>
+      <div class="card-body">
+        <h3>SMART Fuel Screening & Engine Protection Device</h3>
+        <p>Final-year project: detects adulterated fuel before it reaches an engine. The first
+           prototype failed on sensing; I rebuilt it into a working device, presented it at a
+           conference and it became a faculty-sponsored patent.</p>
+        <ul class="tags"><li>Sensors</li><li>Embedded</li><li>Mechanical design</li></ul>
+        <div class="card-links"><span class="muted">Patent, 2022</span></div>
       </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media fig-light"><img src="assets/img/proj_sweeper_fea.jpg" alt="Finite element analysis of the mechanical sweeper frame" loading="lazy"></div>
+      <div class="card-body">
+        <h3>Mechanical Sweeper: Design, FEA & Fabrication</h3>
+        <p>Frame design, finite element stress analysis and fabrication of a mechanical sweeper,
+           published in the Nigerian Journal of Technological Development.</p>
+        <ul class="tags"><li>CAD</li><li>FEA</li><li>Fabrication</li></ul>
+        <div class="card-links"><a href="#publications">Publication ↓</a></div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media"><div class="media-placeholder">🛰️</div></div>
+      <div class="card-body">
+        <h3>UGV SLAM & Path Planning</h3>
+        <p>Research internship at Sintez, Moscow: SLAM and path planning for an unmanned ground
+           vehicle, closing the gap between what onboard sensing covers and what the planner needs.</p>
+        <ul class="tags"><li>ROS 2</li><li>SLAM</li><li>Planning</li></ul>
+        <div class="card-links"><span class="muted">Research internship, 2026</span></div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media"><div class="media-placeholder">🤖</div></div>
       <div class="card-body">
         <h3>4WD Mobile Robot, ROS 2 Simulation</h3>
         <p>Full ROS 2 + Gazebo simulation of a 4WD differential-drive robot modeled from real
@@ -114,27 +199,14 @@
     </article>
 
     <article class="card reveal">
-      <div class="card-media">
-        <img src="https://raw.githubusercontent.com/FaithOgunwoye/BLOCKCHAIN_NFT-Provenance/main/CODE/punk_NFT.png" alt="NFT provenance analysis" loading="lazy">
-      </div>
+      <div class="card-media"><div class="media-placeholder">📶</div></div>
       <div class="card-body">
-        <h3>NFT Provenance: Who Minted First</h3>
-        <p>Cross-platform NFT provenance inference for duplicate and near-duplicate digital media:
-           buyer-side duplicate-risk screening with on-chain who-minted-first resolution.</p>
-        <ul class="tags"><li>Python</li><li>Blockchain</li><li>Computer Vision</li></ul>
-        <div class="card-links"><a href="https://github.com/FaithOgunwoye/BLOCKCHAIN_NFT-Provenance" target="_blank" rel="noopener">GitHub ↗</a></div>
-      </div>
-    </article>
-
-    <article class="card reveal">
-      <div class="card-media">
-        <div class="media-placeholder">📡</div>
-      </div>
-      <div class="card-body">
-        <h3>ML on LiDAR Data</h3>
-        <p>Machine learning models applied to LiDAR point cloud data for perception tasks.</p>
-        <ul class="tags"><li>Python</li><li>LiDAR</li><li>ML</li></ul>
-        <div class="card-links"><a href="https://github.com/A-C-Simon/sonata_ws" target="_blank" rel="noopener">GitHub ↗</a></div>
+        <h3>Compressive Sensing & MU-MIMO Beamforming</h3>
+        <p>Compressive sensing framework decoding simultaneous transmissions from 100+ users
+           (error rate below 0.05, beating a 4x ALOHA baseline), plus learnable beamforming
+           for 64-antenna arrays serving 8 users.</p>
+        <ul class="tags"><li>Python</li><li>Signal Processing</li><li>ML</li></ul>
+        <div class="card-links"><span class="muted">Graduate research project</span></div>
       </div>
     </article>
 
@@ -166,15 +238,28 @@
 
     <article class="card reveal">
       <div class="card-media">
-        <div class="media-placeholder">📶</div>
+        <img src="https://raw.githubusercontent.com/FaithOgunwoye/BLOCKCHAIN_NFT-Provenance/main/CODE/punk_NFT.png" alt="NFT provenance analysis" loading="lazy">
       </div>
       <div class="card-body">
-        <h3>Compressive Sensing & MU-MIMO Beamforming</h3>
-        <p>Compressive sensing framework decoding simultaneous transmissions from 100+ users
-           (error rate below 0.05, beating a 4x ALOHA baseline), plus learnable beamforming
-           for 64-antenna arrays serving 8 users.</p>
-        <ul class="tags"><li>Python</li><li>Signal Processing</li><li>ML</li></ul>
-        <div class="card-links"><span class="muted">Graduate research project</span></div>
+        <h3>NFT Provenance: Who Minted First</h3>
+        <p>Cross-platform NFT provenance inference for duplicate and near-duplicate digital media:
+           buyer-side duplicate-risk screening with on-chain who-minted-first resolution.</p>
+        <ul class="tags"><li>Python</li><li>Blockchain</li><li>Computer Vision</li></ul>
+        <div class="card-links"><a href="https://github.com/FaithOgunwoye/BLOCKCHAIN_NFT-Provenance" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-media"><div class="media-placeholder">🔗</div></div>
+      <div class="card-body">
+        <h3>Everything else</h3>
+        <p>More code, datasets and experiments live on my GitHub, and the full publication list
+           is on Google Scholar.</p>
+        <ul class="tags"><li>GitHub</li><li>Scholar</li></ul>
+        <div class="card-links">
+          <a href="https://github.com/FaithOgunwoye" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://scholar.google.com/citations?user=5BlzcCYAAAAJ&hl=en" target="_blank" rel="noopener">Scholar ↗</a>
+        </div>
       </div>
     </article>
 
@@ -248,7 +333,7 @@
     </article>
 
     <article class="pub reveal">
-      <div class="pub-media"><div class="media-placeholder">⛽</div></div>
+      <a class="pub-media fig" href="assets/img/pub_biofuels.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_biofuels.jpg" alt="Combustion chamber test rig schematic" loading="lazy"></a>
       <div class="pub-body">
         <h3>Exploring the Impact of Diesel-Vegetable Oil Blends as an Alternative Fuel in Combustion Chambers</h3>
         <p class="pub-meta">Biofuels · 2025</p>
@@ -257,7 +342,7 @@
     </article>
 
     <article class="pub reveal">
-      <div class="pub-media"><div class="media-placeholder">🔩</div></div>
+      <a class="pub-media fig" href="assets/img/pub_tig_ann.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_tig_ann.jpg" alt="Artificial neural network used to predict impact strength" loading="lazy"></a>
       <div class="pub-body">
         <h3>Prediction of Impact Strength of TIG Welded Cr-Mo Steel Using Artificial Neural Networks</h3>
         <p class="pub-meta">Metallurgical and Materials Engineering · 2024</p>
@@ -266,7 +351,7 @@
     </article>
 
     <article class="pub reveal">
-      <div class="pub-media"><div class="media-placeholder">🧹</div></div>
+      <a class="pub-media fig" href="assets/img/pub_sweeper_cad.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_sweeper_cad.jpg" alt="CAD model of the mechanical sweeper" loading="lazy"></a>
       <div class="pub-body">
         <h3>Design and Fabrication of a Mechanical Sweeper</h3>
         <p class="pub-meta">Nigerian Journal of Technological Development · 2024</p>
@@ -275,7 +360,7 @@
     </article>
 
     <article class="pub reveal">
-      <div class="pub-media"><div class="media-placeholder">⚙️</div></div>
+      <a class="pub-media fig" href="assets/img/pub_predictive.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_predictive.jpg" alt="Industrial production line monitored for predictive maintenance" loading="lazy"></a>
       <div class="pub-body">
         <h3>Predictive Maintenance of Industrial Equipment Using Machine Learning</h3>
         <p class="pub-meta">Intl. Journal of Science and Technology Research Archive · 2023</p>
@@ -285,7 +370,7 @@
     </article>
 
     <article class="pub reveal">
-      <div class="pub-media"><div class="media-placeholder">🌱</div></div>
+      <a class="pub-media fig" href="assets/img/pub_materials.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_materials.jpg" alt="Factors linking clean technologies to environmental load capacity" loading="lazy"></a>
       <div class="pub-body">
         <h3>Creating New Materials and Technologies to Reduce the Environmental Impact of Human Activity</h3>
         <p class="pub-meta">Intl. Journal of Advanced Multidisciplinary Research and Studies, Vol. 3, Issue 6 · 2023</p>
