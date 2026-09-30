@@ -20,8 +20,9 @@
   <ul id="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#lab">In the Lab</a></li>
     <li><a href="#publications">Publications</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#cv">CV</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -95,11 +96,10 @@
   </div>
 </section>
 
-<!-- ============ PROJECTS ============ -->
-<section id="projects" class="section">
-  <h2 class="section-title reveal"><span class="section-num">02.</span> Research & Projects</h2>
-  <p class="section-lead reveal">My work asks one question from three directions: how a robot should perceive the parts of the world it is about to touch, when cameras only see part of the scene.</p>
-
+<!-- ============ LAB ============ -->
+<section id="lab" class="section">
+  <h2 class="section-title reveal"><span class="section-num">02.</span> In the Lab</h2>
+  <p class="section-lead reveal">My work asks how a robot should perceive the parts of the world it is about to touch, when cameras only see part of the scene. Here I am collecting the real-robot demonstrations behind HapticVLA.</p>
   <div class="feature-list">
 
     <article class="feature reveal">
@@ -117,6 +117,138 @@
         <div class="card-links"><a href="https://arxiv.org/abs/2603.15257" target="_blank" rel="noopener">Paper ↗</a></div>
       </div>
     </article>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section id="publications" class="section">
+  <h2 class="section-title reveal"><span class="section-num">03.</span> Publications & Research</h2>
+  <div class="pub-list">
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/smelldiffusion.jpg" target="_blank" rel="noopener"><img src="assets/img/smelldiffusion.jpg" alt="SmellDiffusion overview: language-guided gas source localization with an olfactory scene graph" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs</h3>
+        <p class="pub-authors"><strong>Faith Ogunwoye*</strong>, Iana Zhura*, Hajira Amjad, Timofei Kozlov, Didar Seyidov, Dmitrii Plotnikov, Fedor Fedorov, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">First author · Under review, IEEE ICRA 2027 · 2026</p>
+        <p>A quadruped sent to a named gas leak: open-vocabulary olfactory scene graphs keep
+           gas identity and source estimates, and diffusion planning drives navigation, evaluated
+           across 424 source and wind configurations with matched Gazebo trials.
+           <a href="https://arxiv.org/abs/2609.20624" target="_blank" rel="noopener">arXiv ↗</a></p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/hapticvla.jpg" target="_blank" rel="noopener"><img src="assets/img/hapticvla.jpg" alt="HapticVLA architecture: tactile distillation into a vision-language-action model" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing</h3>
+        <p class="pub-authors">Konstantin Gubernatorov*, Mikhail Sannikov*, Ilya Mikhalchuk*, Egor Kuznetsov, Makar Artemov, <strong>Faith Ogunwoye</strong>, Marcelino Fernando, Artem Asanov, Ziang Guo, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">IEEE/RSJ IROS 2026 · Skoltech Top Paper Award</p>
+        <p>Tactile capability is distilled into a vision-language-action policy, reaching 86.7%
+           mean success on real contact-rich tasks with no tactile sensor at inference. I collected
+           the real-world dual-arm teleoperation demonstrations the model was trained on.
+           <a href="https://arxiv.org/abs/2603.15257" target="_blank" rel="noopener">arXiv ↗</a></p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/clouddiffusion.jpg" target="_blank" rel="noopener"><img src="assets/img/clouddiffusion.jpg" alt="CloudDiffusion: single-step LiDAR scene completion compared with iterative diffusion baselines" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>CloudDiffusion: Diffusion-Based Scene Completion in the Point Cloud Domain</h3>
+        <p class="pub-authors">Chidera Agbasiere*, Mikhail Sannikov*, <strong>Faith Ogunwoye</strong>, Erik Shaikhiev, Alex Kozinov, Ilya Mikhalchuk, Iana Zhura, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">IEEE SMC 2026</p>
+        <p>Diffusion-based LiDAR scene completion directly in the point cloud domain. I built the
+           monocular branch, replacing LiDAR input with single-camera depth converted to pseudo-LiDAR,
+           and quantified what that substitution costs.
+           <a href="https://arxiv.org/abs/2606.16048" target="_blank" rel="noopener">arXiv ↗</a></p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/hapticwam.jpg" target="_blank" rel="noopener"><img src="assets/img/hapticwam.jpg" alt="HapticWAM: world action model trained with visuo-tactile distillation on real manipulation tasks" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>HapticWAM: Distilling Imagined Touch into a World-Action Model without Inference-Time Tactile Sensing</h3>
+        <p class="pub-authors">Mikhail Sannikov*, Ilya Mikhalchuk*, Konstantin Gubernatorov*, Petr Kovalev, <strong>Faith Ogunwoye</strong>, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">Under review, IEEE ICRA 2027 · 2026</p>
+        <p>A world action model that predicts future frames, imagined contact and robot actions,
+           distilling tactile knowledge so no fingertip sensor is needed at deployment.
+           <a href="https://arxiv.org/abs/2609.23888" target="_blank" rel="noopener">arXiv ↗</a></p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <div class="pub-media"><div class="media-placeholder">🦾</div></div>
+      <div class="pub-body">
+        <h3>JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation</h3>
+        <p class="pub-meta">Submitted, ACM/IEEE HRI 2027 (Short Contributions)</p>
+        <p>Paired-replay benchmark evaluated on a real UR3 arm. Manuscript withheld during
+           double-blind review.</p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/pub_biofuels.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_biofuels.jpg" alt="Combustion chamber test rig schematic" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>Exploring the Impact of Diesel-Vegetable Oil Blends as an Alternative Fuel in Combustion Chambers</h3>
+        <p class="pub-meta">Biofuels · 2025</p>
+        <p>Experimental study of diesel and vegetable oil blends as alternative fuels.</p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/pub_tig_ann.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_tig_ann.jpg" alt="Artificial neural network used to predict impact strength" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>Prediction of Impact Strength of TIG Welded Cr-Mo Steel Using Artificial Neural Networks</h3>
+        <p class="pub-meta">Metallurgical and Materials Engineering · 2024</p>
+        <p>ANN-based prediction of mechanical properties for TIG welded chromium-molybdenum steel.</p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/pub_sweeper_cad.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_sweeper_cad.jpg" alt="CAD model of the mechanical sweeper" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>Design and Fabrication of a Mechanical Sweeper</h3>
+        <p class="pub-meta">Nigerian Journal of Technological Development · 2024</p>
+        <p>Design, fabrication, and evaluation of a mechanical sweeping machine.</p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/pub_predictive.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_predictive.jpg" alt="Industrial production line monitored for predictive maintenance" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>Predictive Maintenance of Industrial Equipment Using Machine Learning</h3>
+        <p class="pub-meta">Intl. Journal of Science and Technology Research Archive · 2023</p>
+        <p>ML-driven predictive maintenance for industrial equipment in the Awka Metropolis
+           industrial environment.</p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/pub_materials.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_materials.jpg" alt="Factors linking clean technologies to environmental load capacity" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>Creating New Materials and Technologies to Reduce the Environmental Impact of Human Activity</h3>
+        <p class="pub-meta">Intl. Journal of Advanced Multidisciplinary Research and Studies, Vol. 3, Issue 6 · 2023</p>
+        <p>Review of emerging sustainable materials and technologies, including solar cells,
+           batteries, green construction materials, and electric vehicles, that reduce
+           environmental harm.
+           <a href="https://www.multiresearchjournal.com/arclist/list-2023.3.6/id-2010" target="_blank" rel="noopener">Paper ↗</a></p>
+      </div>
+    </article>
+
+  </div>
+  <p class="reveal pub-more">
+    * Equal contribution. Full list on
+    <a href="https://scholar.google.com/citations?user=5BlzcCYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    and
+    <a href="https://www.researchgate.net/profile/Faith-Ogunwoye-2" target="_blank" rel="noopener">ResearchGate</a>.
+  </p>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <h2 class="section-title reveal"><span class="section-num">04.</span> Projects</h2>
+
+  <div class="feature-list">
 
     <article class="feature reveal">
       <a class="feature-media" href="assets/img/proj_smell_paths.jpg" target="_blank" rel="noopener"><img src="assets/img/proj_smell_paths.jpg" alt="SmellDiffusion planned paths through a gas concentration field" loading="lazy"></a>
@@ -125,8 +257,8 @@
         <h3>Finding a named gas leak with a legged robot</h3>
         <p>A quadruped is told which gas to find. An open-vocabulary olfactory scene graph keeps
            each gas's identity and estimated source, and diffusion planning chooses the route
-           through the plume. I led the project and evaluated it across <strong>424 source and
-           wind configurations</strong> with matched Gazebo trials.</p>
+           through the plume. As first author I built most of the simulation, evaluating the method
+           across <strong>424 source and wind configurations</strong> with matched Gazebo trials.</p>
         <ul class="tags"><li>Diffusion planning</li><li>Scene graphs</li><li>Quadruped</li><li>Gazebo</li></ul>
         <div class="card-links"><a href="https://arxiv.org/abs/2609.20624" target="_blank" rel="noopener">Paper ↗</a></div>
       </div>
@@ -266,133 +398,9 @@
   </div>
 </section>
 
-<!-- ============ PUBLICATIONS ============ -->
-<section id="publications" class="section">
-  <h2 class="section-title reveal"><span class="section-num">03.</span> Publications & Research</h2>
-  <div class="pub-list">
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/smelldiffusion.jpg" target="_blank" rel="noopener"><img src="assets/img/smelldiffusion.jpg" alt="SmellDiffusion overview: language-guided gas source localization with an olfactory scene graph" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs</h3>
-        <p class="pub-authors"><strong>Faith Ogunwoye*</strong>, Iana Zhura*, Hajira Amjad, Timofei Kozlov, Didar Seyidov, Dmitrii Plotnikov, Fedor Fedorov, Dzmitry Tsetserukou</p>
-        <p class="pub-meta">First author · Under review, IEEE ICRA 2027 · 2026</p>
-        <p>A quadruped sent to a named gas leak: open-vocabulary olfactory scene graphs keep
-           gas identity and source estimates, and diffusion planning drives navigation, evaluated
-           across 424 source and wind configurations with matched Gazebo trials.
-           <a href="https://arxiv.org/abs/2609.20624" target="_blank" rel="noopener">arXiv ↗</a></p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/hapticvla.jpg" target="_blank" rel="noopener"><img src="assets/img/hapticvla.jpg" alt="HapticVLA architecture: tactile distillation into a vision-language-action model" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing</h3>
-        <p class="pub-authors">Konstantin Gubernatorov*, Mikhail Sannikov*, Ilya Mikhalchuk*, Egor Kuznetsov, Makar Artemov, <strong>Faith Ogunwoye</strong>, Marcelino Fernando, Artem Asanov, Ziang Guo, Dzmitry Tsetserukou</p>
-        <p class="pub-meta">IEEE/RSJ IROS 2026 · Skoltech Top Paper Award</p>
-        <p>Tactile capability is distilled into a vision-language-action policy, reaching 86.7%
-           mean success on real contact-rich tasks with no tactile sensor at inference. I collected
-           the real-world dual-arm teleoperation demonstrations the model was trained on.
-           <a href="https://arxiv.org/abs/2603.15257" target="_blank" rel="noopener">arXiv ↗</a></p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/clouddiffusion.jpg" target="_blank" rel="noopener"><img src="assets/img/clouddiffusion.jpg" alt="CloudDiffusion: single-step LiDAR scene completion compared with iterative diffusion baselines" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>CloudDiffusion: Diffusion-Based Scene Completion in the Point Cloud Domain</h3>
-        <p class="pub-authors">Chidera Agbasiere*, Mikhail Sannikov*, <strong>Faith Ogunwoye</strong>, Erik Shaikhiev, Alex Kozinov, Ilya Mikhalchuk, Iana Zhura, Dzmitry Tsetserukou</p>
-        <p class="pub-meta">IEEE SMC 2026</p>
-        <p>Diffusion-based LiDAR scene completion directly in the point cloud domain. I built the
-           monocular branch, replacing LiDAR input with single-camera depth converted to pseudo-LiDAR,
-           and quantified what that substitution costs.
-           <a href="https://arxiv.org/abs/2606.16048" target="_blank" rel="noopener">arXiv ↗</a></p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/hapticwam.jpg" target="_blank" rel="noopener"><img src="assets/img/hapticwam.jpg" alt="HapticWAM: world action model trained with visuo-tactile distillation on real manipulation tasks" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>HapticWAM: Distilling Imagined Touch into a World-Action Model without Inference-Time Tactile Sensing</h3>
-        <p class="pub-authors">Mikhail Sannikov*, Ilya Mikhalchuk*, Konstantin Gubernatorov*, Petr Kovalev, <strong>Faith Ogunwoye</strong>, Dzmitry Tsetserukou</p>
-        <p class="pub-meta">Under review, IEEE ICRA 2027 · 2026</p>
-        <p>A world action model that predicts future frames, imagined contact and robot actions,
-           distilling tactile knowledge so no fingertip sensor is needed at deployment.
-           <a href="https://arxiv.org/abs/2609.23888" target="_blank" rel="noopener">arXiv ↗</a></p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <div class="pub-media"><div class="media-placeholder">🦾</div></div>
-      <div class="pub-body">
-        <h3>JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation</h3>
-        <p class="pub-meta">Submitted, ACM/IEEE HRI 2027 (Short Contributions)</p>
-        <p>Paired-replay benchmark evaluated on a real UR3 arm. Manuscript withheld during
-           double-blind review.</p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/pub_biofuels.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_biofuels.jpg" alt="Combustion chamber test rig schematic" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>Exploring the Impact of Diesel-Vegetable Oil Blends as an Alternative Fuel in Combustion Chambers</h3>
-        <p class="pub-meta">Biofuels · 2025</p>
-        <p>Experimental study of diesel and vegetable oil blends as alternative fuels.</p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/pub_tig_ann.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_tig_ann.jpg" alt="Artificial neural network used to predict impact strength" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>Prediction of Impact Strength of TIG Welded Cr-Mo Steel Using Artificial Neural Networks</h3>
-        <p class="pub-meta">Metallurgical and Materials Engineering · 2024</p>
-        <p>ANN-based prediction of mechanical properties for TIG welded chromium-molybdenum steel.</p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/pub_sweeper_cad.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_sweeper_cad.jpg" alt="CAD model of the mechanical sweeper" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>Design and Fabrication of a Mechanical Sweeper</h3>
-        <p class="pub-meta">Nigerian Journal of Technological Development · 2024</p>
-        <p>Design, fabrication, and evaluation of a mechanical sweeping machine.</p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/pub_predictive.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_predictive.jpg" alt="Industrial production line monitored for predictive maintenance" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>Predictive Maintenance of Industrial Equipment Using Machine Learning</h3>
-        <p class="pub-meta">Intl. Journal of Science and Technology Research Archive · 2023</p>
-        <p>ML-driven predictive maintenance for industrial equipment in the Awka Metropolis
-           industrial environment.</p>
-      </div>
-    </article>
-
-    <article class="pub reveal">
-      <a class="pub-media fig" href="assets/img/pub_materials.jpg" target="_blank" rel="noopener"><img src="assets/img/pub_materials.jpg" alt="Factors linking clean technologies to environmental load capacity" loading="lazy"></a>
-      <div class="pub-body">
-        <h3>Creating New Materials and Technologies to Reduce the Environmental Impact of Human Activity</h3>
-        <p class="pub-meta">Intl. Journal of Advanced Multidisciplinary Research and Studies, Vol. 3, Issue 6 · 2023</p>
-        <p>Review of emerging sustainable materials and technologies, including solar cells,
-           batteries, green construction materials, and electric vehicles, that reduce
-           environmental harm.
-           <a href="https://www.multiresearchjournal.com/arclist/list-2023.3.6/id-2010" target="_blank" rel="noopener">Paper ↗</a></p>
-      </div>
-    </article>
-
-  </div>
-  <p class="reveal pub-more">
-    * Equal contribution. Full list on
-    <a href="https://scholar.google.com/citations?user=5BlzcCYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-    and
-    <a href="https://www.researchgate.net/profile/Faith-Ogunwoye-2" target="_blank" rel="noopener">ResearchGate</a>.
-  </p>
-</section>
-
 <!-- ============ CV ============ -->
 <section id="cv" class="section">
-  <h2 class="section-title reveal"><span class="section-num">04.</span> Curriculum Vitae</h2>
+  <h2 class="section-title reveal"><span class="section-num">05.</span> Curriculum Vitae</h2>
   <div class="cv-actions reveal">
     <a class="btn btn-primary" href="assets/Faith_Ogunwoye_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
   </div>
@@ -450,7 +458,7 @@
 
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="section contact">
-  <h2 class="section-title reveal"><span class="section-num">05.</span> Get In Touch</h2>
+  <h2 class="section-title reveal"><span class="section-num">06.</span> Get In Touch</h2>
   <p class="reveal">I'm open to research collaborations, robotics/ML roles, and interesting projects.
      My inbox is always open.</p>
   <a href="mailto:ogunwoyefaitho@gmail.com" class="btn btn-primary reveal">Say hello</a>
