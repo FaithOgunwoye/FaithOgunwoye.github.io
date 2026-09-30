@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Faith Ogunwoye | Robotics & ML Engineer</title>
-<meta name="description" content="Portfolio of Faith Ogunwoye: robotics, machine learning, and point cloud research.">
+<meta name="description" content="Faith Ogunwoye, Skoltech robotics researcher: vision-language-action models, tactile manipulation, and 3D perception from partial observation.">
 <link rel="icon" href="https://avatars.githubusercontent.com/u/120261316?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -34,9 +34,9 @@
     <h1 class="hero-name reveal">Faith Ogunwoye<span class="accent">.</span></h1>
     <h2 class="hero-tagline reveal">I'm a <span id="typed"></span><span class="cursor">|</span></h2>
     <p class="hero-sub reveal">
-      MSc researcher working on robotics, vision-language-action models,
-      and 3D point cloud understanding. I build autonomous robots, machine learning
-      systems, and simulation-driven designs.
+      MSc researcher at Skoltech working on how robots perceive what they touch:
+      vision-language-action models for contact-rich manipulation, tactile learning,
+      and 3D scene completion from partial observation.
     </p>
     <div class="hero-cta reveal">
       <a href="#projects" class="btn btn-primary">View my work</a>
@@ -59,16 +59,17 @@
   <div class="about-grid">
     <div class="about-text reveal">
       <p>
-        I'm a mechanical engineer turned robotics and ML researcher, currently pursuing an
-        MSc in Next Generation Communication Technologies, specializing
-        in IoT, robotics, and CAD/prototyping.
+        I'm a mechanical engineer turned robotics and ML researcher. I graduated with First
+        Class Honours in Mechanical Engineering and am now completing an MSc in Internet of
+        Things and Wireless Technologies at Skoltech (robotics track), in Prof. Dzmitry
+        Tsetserukou's Intelligent Space Robotics Laboratory.
       </p>
       <p>
-        My research interests are <strong>vision-language-action models</strong> for robot
-        manipulation, <strong>3D scene understanding and point cloud processing</strong>, and
-        simulation-driven design. Recent work includes diffusion-based point cloud scene
-        completion (PointDiffusion) and contact-rich manipulation without inference-time
-        tactile sensing (HapticVLA).
+        My research interests are <strong>vision-language-action models</strong> for
+        contact-rich manipulation, <strong>touch and tactile learning</strong>, and
+        <strong>3D perception from partial observation</strong>. Recent work includes
+        SmellDiffusion (first author), HapticVLA (IEEE/RSJ IROS 2026, Skoltech Top Paper Award),
+        CloudDiffusion (IEEE SMC 2026) and HapticWAM.
       </p>
       <p>Technologies I work with:</p>
       <ul class="tech-list">
@@ -186,24 +187,63 @@
   <div class="pub-list">
 
     <article class="pub reveal">
-      <div class="pub-media"><div class="media-placeholder">☁️</div></div>
+      <a class="pub-media fig" href="assets/img/smelldiffusion.jpg" target="_blank" rel="noopener"><img src="assets/img/smelldiffusion.jpg" alt="SmellDiffusion overview: language-guided gas source localization with an olfactory scene graph" loading="lazy"></a>
       <div class="pub-body">
-        <h3>PointDiffusion: Diffusion-Based Scene Completion in the Point Cloud Domain</h3>
-        <p class="pub-meta">IEEE SMC · 2026</p>
-        <p>Diffusion-based scene completion operating directly in the point cloud domain
-           for 3D scene understanding.
+        <h3>SmellDiffusion: Diffusion-Based Quadruped Navigation with Olfactory Scene Graphs</h3>
+        <p class="pub-authors"><strong>Faith Ogunwoye*</strong>, Iana Zhura*, Hajira Amjad, Timofei Kozlov, Didar Seyidov, Dmitrii Plotnikov, Fedor Fedorov, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">First author · Under review, IEEE ICRA 2027 · 2026</p>
+        <p>A quadruped sent to a named gas leak: open-vocabulary olfactory scene graphs keep
+           gas identity and source estimates, and diffusion planning drives navigation, evaluated
+           across 424 source and wind configurations with matched Gazebo trials.
+           <a href="https://arxiv.org/abs/2609.20624" target="_blank" rel="noopener">arXiv ↗</a></p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/hapticvla.jpg" target="_blank" rel="noopener"><img src="assets/img/hapticvla.jpg" alt="HapticVLA architecture: tactile distillation into a vision-language-action model" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing</h3>
+        <p class="pub-authors">Konstantin Gubernatorov*, Mikhail Sannikov*, Ilya Mikhalchuk*, Egor Kuznetsov, Makar Artemov, <strong>Faith Ogunwoye</strong>, Marcelino Fernando, Artem Asanov, Ziang Guo, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">IEEE/RSJ IROS 2026 · Skoltech Top Paper Award</p>
+        <p>Tactile capability is distilled into a vision-language-action policy, reaching 86.7%
+           mean success on real contact-rich tasks with no tactile sensor at inference. I collected
+           the real-world dual-arm teleoperation demonstrations the model was trained on.
+           <a href="https://arxiv.org/abs/2603.15257" target="_blank" rel="noopener">arXiv ↗</a></p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/clouddiffusion.jpg" target="_blank" rel="noopener"><img src="assets/img/clouddiffusion.jpg" alt="CloudDiffusion: single-step LiDAR scene completion compared with iterative diffusion baselines" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>CloudDiffusion: Diffusion-Based Scene Completion in the Point Cloud Domain</h3>
+        <p class="pub-authors">Chidera Agbasiere*, Mikhail Sannikov*, <strong>Faith Ogunwoye</strong>, Erik Shaikhiev, Alex Kozinov, Ilya Mikhalchuk, Iana Zhura, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">IEEE SMC 2026</p>
+        <p>Diffusion-based LiDAR scene completion directly in the point cloud domain. I built the
+           monocular branch, replacing LiDAR input with single-camera depth converted to pseudo-LiDAR,
+           and quantified what that substitution costs.
            <a href="https://arxiv.org/abs/2606.16048" target="_blank" rel="noopener">arXiv ↗</a></p>
+      </div>
+    </article>
+
+    <article class="pub reveal">
+      <a class="pub-media fig" href="assets/img/hapticwam.jpg" target="_blank" rel="noopener"><img src="assets/img/hapticwam.jpg" alt="HapticWAM: world action model trained with visuo-tactile distillation on real manipulation tasks" loading="lazy"></a>
+      <div class="pub-body">
+        <h3>HapticWAM: Distilling Imagined Touch into a World-Action Model without Inference-Time Tactile Sensing</h3>
+        <p class="pub-authors">Mikhail Sannikov*, Ilya Mikhalchuk*, Konstantin Gubernatorov*, Petr Kovalev, <strong>Faith Ogunwoye</strong>, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">Under review, IEEE ICRA 2027 · 2026</p>
+        <p>A world action model that predicts future frames, imagined contact and robot actions,
+           distilling tactile knowledge so no fingertip sensor is needed at deployment.
+           <a href="https://arxiv.org/abs/2609.23888" target="_blank" rel="noopener">arXiv ↗</a></p>
       </div>
     </article>
 
     <article class="pub reveal">
       <div class="pub-media"><div class="media-placeholder">🦾</div></div>
       <div class="pub-body">
-        <h3>HapticVLA: Contact-Rich Manipulation via Vision-Language-Action Model without Inference-Time Tactile Sensing</h3>
-        <p class="pub-meta">arXiv preprint · 2026</p>
-        <p>Vision-language-action model for contact-rich robot manipulation that removes the
-           need for tactile sensing at inference time.
-           <a href="https://arxiv.org/abs/2603.15257" target="_blank" rel="noopener">arXiv ↗</a></p>
+        <h3>JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation</h3>
+        <p class="pub-meta">Submitted, ACM/IEEE HRI 2027 (Short Contributions)</p>
+        <p>Paired-replay benchmark evaluated on a real UR3 arm. Manuscript withheld during
+           double-blind review.</p>
       </div>
     </article>
 
@@ -258,7 +298,7 @@
 
   </div>
   <p class="reveal pub-more">
-    Full list on
+    * Equal contribution. Full list on
     <a href="https://scholar.google.com/citations?user=5BlzcCYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
     and
     <a href="https://www.researchgate.net/profile/Faith-Ogunwoye-2" target="_blank" rel="noopener">ResearchGate</a>.
@@ -275,11 +315,22 @@
     <div class="tl-item reveal">
       <div class="tl-dot"></div>
       <div class="tl-content">
-        <h3>MSc, Next Generation Communication Technologies</h3>
-        <p class="tl-meta">September 2025 to present</p>
-        <p>Specialization in IoT, robotics, and CAD/prototyping. Research on VLA mobile robot
-           manipulation: dual-arm teleoperation for real-world demonstration data collection
-           enabling robot learning.</p>
+        <h3>MSc, Internet of Things and Wireless Technologies · Skoltech</h3>
+        <p class="tl-meta">September 2025 to June 2027 (expected) · Robotics track · Supervisor: Prof. Dzmitry Tsetserukou</p>
+        <p>Research in the Intelligent Space Robotics Laboratory on vision-language-action models,
+           tactile manipulation and 3D perception: real-world dual-arm teleoperation data for
+           HapticVLA, the monocular branch of CloudDiffusion, first-author SmellDiffusion, and UR3
+           experiments for JitterVLA. Awards: Skoltech Top Paper Award (HapticVLA, 2026) and
+           Skoltech Community Scholarship (2026).</p>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>Research Intern, Rover UGV SLAM and Path Planning · Sintez, Moscow</h3>
+        <p class="tl-meta">2026</p>
+        <p>Intensive research internship on SLAM and path planning for an unmanned ground vehicle,
+           working on the gap between what onboard sensing covers and what the planner requires.</p>
       </div>
     </div>
     <div class="tl-item reveal">
@@ -303,7 +354,7 @@
       <div class="tl-dot"></div>
       <div class="tl-content">
         <h3>BSc, Mechanical Engineering · Abiola Ajimobi Technical University, Nigeria</h3>
-        <p class="tl-meta">January 2018 to February 2024 · GPA 4.77 / 5 · Top 1% of department</p>
+        <p class="tl-meta">January 2018 to February 2023 · First Class Honours · GPA 4.77 / 5 · Top 1% of department</p>
         <p>Thesis: design, fabrication, and performance evaluation of a smart fuel screening
            and engine protection device. Research assistant on the 155k GBP Royal Academy of
            Engineering project "AI for Clean Energy".</p>
