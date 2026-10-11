@@ -1,9 +1,9 @@
 // ---------- typing effect ----------
 const roles = [
+  "Robot Learning Researcher",
   "Robotics Engineer",
   "ML Researcher",
   "ROS 2 Developer",
-  "Robot Learning Researcher",
 ];
 const typedEl = document.getElementById("typed");
 let roleIdx = 0, charIdx = 0, deleting = false;

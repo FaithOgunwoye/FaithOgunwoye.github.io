@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faith Ogunwoye | Robotics & ML Engineer</title>
+<title>Faith Ogunwoye | Robot Learning Researcher</title>
 <meta name="description" content="Faith Ogunwoye, Skoltech robotics researcher: vision-language-action models, tactile manipulation, and 3D perception from partial observation.">
-<link rel="icon" href="https://avatars.githubusercontent.com/u/120261316?v=4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0f1e'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='monospace' font-weight='700' font-size='30' fill='%23f1f5f9'%3EFO%3Ctspan fill='%2322d3ee'%3E.%3C/tspan%3E%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -28,73 +28,62 @@
   </ul>
 </nav>
 
-<!-- ============ HERO ============ -->
+<!-- ============ HERO + ABOUT (first view) ============ -->
 <header id="home" class="hero">
-  <div class="hero-content">
-    <p class="hero-hello reveal">Hi, my name is</p>
-    <h1 class="hero-name reveal">Faith Ogunwoye<span class="accent">.</span></h1>
-    <h2 class="hero-tagline reveal">I'm a <span id="typed"></span><span class="cursor">|</span></h2>
-    <p class="hero-sub reveal">
-      MSc researcher at Skoltech working on how robots perceive what they touch:
-      vision-language-action models for contact-rich manipulation, tactile learning,
-      and 3D scene completion from partial observation.
-    </p>
-    <div class="hero-cta reveal">
-      <a href="#projects" class="btn btn-primary">View my work</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <p class="hero-hello reveal">Hi, my name is</p>
+      <h1 class="hero-name reveal">Faith Ogunwoye<span class="accent">.</span></h1>
+      <h2 class="hero-tagline reveal">I'm a <span id="typed"></span><span class="cursor">|</span></h2>
+      <p class="hero-sub reveal">
+        I study how robots should act on what they cannot fully see or feel:
+        vision-language-action models for contact-rich manipulation, tactile learning,
+        and 3D scene completion from partial observation.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#lab" class="btn btn-primary">View my work</a>
+        <a href="assets/Faith_Ogunwoye_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
+      </div>
+      <ul class="hero-links reveal">
+        <li><a href="https://scholar.google.com/citations?user=5BlzcCYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://github.com/FaithOgunwoye" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/the-faith-ogunwoye" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:ogunwoyefaitho@gmail.com">Email</a></li>
+      </ul>
     </div>
+
+    <aside id="about" class="about-card reveal" aria-label="About me">
+      <div class="about-head">
+        <div class="avatar-ring small"><img src="assets/img/faith.jpg" alt="Faith Ogunwoye"></div>
+        <div>
+          <p class="about-label"><span class="section-num">01.</span> About me</p>
+          <p class="about-role">MSc researcher at Skoltech</p>
+          <p class="about-meta">Intelligent Space Robotics Laboratory</p>
+        </div>
+      </div>
+      <p>
+        I'm a mechanical engineer turned robot learning researcher. After a First Class degree
+        in Mechanical Engineering (top 1%), I joined Prof. Dzmitry Tsetserukou's lab at Skoltech,
+        where I work across robot learning and 3D perception: I collected the dual-arm
+        demonstrations behind HapticVLA, built the monocular branch of CloudDiffusion, and run
+        UR3 experiments for JitterVLA.
+      </p>
+      <ul class="highlights">
+        <li><b>Award</b><span>Skoltech Top Paper Award 2026, for HapticVLA</span></li>
+        <li><b>First author</b><span>SmellDiffusion, under review at IEEE ICRA 2027</span></li>
+        <li><b>Accepted</b><span>IEEE/RSJ IROS 2026 · IEEE SMC 2026</span></li>
+        <li><b>Next</b><span>Open to PhD positions from July 2027</span></li>
+      </ul>
+      <ul class="tool-chips" aria-label="Tools">
+        <li>Python</li><li>PyTorch</li><li>ROS 2</li><li>Gazebo</li><li>Isaac Sim</li>
+        <li>UR3 / URSim</li><li>MATLAB / Simulink</li><li>Fusion 360</li>
+      </ul>
+    </aside>
   </div>
-  <div class="hero-avatar reveal">
-    <div class="avatar-ring">
-      <img src="https://avatars.githubusercontent.com/u/120261316?v=4" alt="Faith Ogunwoye">
-    </div>
-  </div>
-  <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+  <a href="#lab" class="scroll-hint" aria-label="Scroll to In the Lab"><span></span></a>
 </header>
 
 <main>
-
-<!-- ============ ABOUT ============ -->
-<section id="about" class="section">
-  <h2 class="section-title reveal"><span class="section-num">01.</span> About Me</h2>
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <p>
-        I'm a mechanical engineer turned robotics and ML researcher. I graduated with First
-        Class Honours in Mechanical Engineering and am now completing an MSc in Internet of
-        Things and Wireless Technologies at Skoltech (robotics track), in Prof. Dzmitry
-        Tsetserukou's Intelligent Space Robotics Laboratory.
-      </p>
-      <p>
-        My research interests are <strong>vision-language-action models</strong> for
-        contact-rich manipulation, <strong>touch and tactile learning</strong>, and
-        <strong>3D perception from partial observation</strong>. Recent work includes
-        SmellDiffusion (first author), HapticVLA (IEEE/RSJ IROS 2026, Skoltech Top Paper Award),
-        CloudDiffusion (IEEE SMC 2026) and HapticWAM.
-      </p>
-      <p>Technologies I work with:</p>
-      <ul class="tech-list">
-        <li>ROS 2 / Gazebo / RViz</li>
-        <li>Python / Scikit-Learn</li>
-        <li>MATLAB / Simulink</li>
-        <li>Fusion 360 / CAD-CAM</li>
-        <li>Solidity / Web3</li>
-        <li>Django REST</li>
-        <li>Unity</li>
-        <li>3D Printing / CNC / PLC</li>
-      </ul>
-    </div>
-    <div class="skills reveal">
-      <h3>Core skills</h3>
-      <div class="skill"><div class="skill-head"><span>Robotics & ROS 2</span><span>90%</span></div><div class="bar"><div class="fill" style="--w:90%"></div></div></div>
-      <div class="skill"><div class="skill-head"><span>Machine Learning</span><span>85%</span></div><div class="bar"><div class="fill" style="--w:85%"></div></div></div>
-      <div class="skill"><div class="skill-head"><span>Python</span><span>90%</span></div><div class="bar"><div class="fill" style="--w:90%"></div></div></div>
-      <div class="skill"><div class="skill-head"><span>CAD & Mechanical Design</span><span>90%</span></div><div class="bar"><div class="fill" style="--w:90%"></div></div></div>
-      <div class="skill"><div class="skill-head"><span>Control Systems</span><span>80%</span></div><div class="bar"><div class="fill" style="--w:80%"></div></div></div>
-      <div class="skill"><div class="skill-head"><span>Blockchain / Web3</span><span>70%</span></div><div class="bar"><div class="fill" style="--w:70%"></div></div></div>
-    </div>
-  </div>
-</section>
 
 <!-- ============ LAB ============ -->
 <section id="lab" class="section">
