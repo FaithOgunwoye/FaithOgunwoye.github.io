@@ -1,23 +1,20 @@
-// ---------- typing effect ----------
-const roles = [
-  "Robot Learning Researcher",
-  "Robotics Engineer",
-  "ML Researcher",
-  "ROS 2 Developer",
-];
-const typedEl = document.getElementById("typed");
-let roleIdx = 0, charIdx = 0, deleting = false;
-
-function typeLoop() {
-  const word = roles[roleIdx];
-  typedEl.textContent = word.slice(0, charIdx);
-  let delay = deleting ? 45 : 95;
-  if (!deleting && charIdx === word.length) { deleting = true; delay = 1600; }
-  else if (deleting && charIdx === 0) { deleting = false; roleIdx = (roleIdx + 1) % roles.length; delay = 350; }
-  else charIdx += deleting ? -1 : 1;
-  setTimeout(typeLoop, delay);
+// ---------- colour theme: system default, remembered once chosen ----------
+const root = document.documentElement;
+const darkQuery = matchMedia("(prefers-color-scheme: dark)");
+const isDark = () => (root.dataset.theme ? root.dataset.theme === "dark" : darkQuery.matches);
+function syncTheme() {
+  const dark = isDark();
+  root.classList.toggle("is-dark", dark);
+  const btn = document.getElementById("theme-toggle");
+  btn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
 }
-typeLoop();
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  root.dataset.theme = isDark() ? "light" : "dark";
+  try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  syncTheme();
+});
+darkQuery.addEventListener("change", syncTheme);
+syncTheme();
 
 // ---------- reveal on scroll ----------
 const observer = new IntersectionObserver(
@@ -72,15 +69,18 @@ function resize() {
 resize();
 window.addEventListener("resize", resize);
 
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
 function drawParticles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (!isDark() || reduceMotion.matches) { requestAnimationFrame(drawParticles); return; }
+  const rgb = getComputedStyle(root).getPropertyValue("--particle").trim();
   for (const p of particles) {
     p.x += p.vx; p.y += p.vy;
     if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
     if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(34, 211, 238, 0.35)";
+    ctx.fillStyle = `rgba(${rgb}, 0.22)`;
     ctx.fill();
   }
   // connect nearby particles
@@ -93,7 +93,7 @@ function drawParticles() {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(34, 211, 238, ${0.12 * (1 - d / (130 * 130))})`;
+        ctx.strokeStyle = `rgba(${rgb}, ${0.08 * (1 - d / (130 * 130))})`;
         ctx.stroke();
       }
     }
@@ -112,4 +112,14 @@ document.querySelectorAll(".yt").forEach((box) => {
   };
   box.querySelector(".yt-play").addEventListener("click", () => load(0));
   chapters.forEach((b) => b.addEventListener("click", () => load(+b.dataset.t)));
+});
+
+// ---------- copy BibTeX ----------
+document.querySelectorAll(".copy-bib").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const text = btn.parentElement.querySelector("code").textContent;
+    try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
+    catch (e) { btn.textContent = "Select and copy"; }
+    setTimeout(() => (btn.textContent = "Copy"), 1600);
+  });
 });
