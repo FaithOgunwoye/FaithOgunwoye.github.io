@@ -24,6 +24,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.15 }
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+window.siteReady = true;
 
 // ---------- navbar: hide on scroll down, active link ----------
 const nav = document.getElementById("navbar");

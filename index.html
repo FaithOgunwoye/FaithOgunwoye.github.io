@@ -21,12 +21,13 @@
     try { t = localStorage.getItem("theme"); } catch (e) {}
     if (t === "light" || t === "dark") d.dataset.theme = t;
     d.classList.add("js");
+    setTimeout(function () { if (!window.siteReady) d.classList.remove("js"); }, 1500);
   })();
 </script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0f1e'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='monospace' font-weight='700' font-size='30' fill='%23f1f5f9'%3EFO%3Ctspan fill='%2322d3ee'%3E.%3C/tspan%3E%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=a3f63ba1">
 </head>
 <body>
 
@@ -564,6 +565,6 @@
   <p>Built by Faith Ogunwoye · <a href="https://github.com/FaithOgunwoye/FaithOgunwoye.github.io" target="_blank" rel="noopener">Source</a></p>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=33d3b7d0"></script>
 </body>
 </html>
