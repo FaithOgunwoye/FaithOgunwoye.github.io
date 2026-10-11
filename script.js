@@ -101,3 +101,15 @@ function drawParticles() {
   requestAnimationFrame(drawParticles);
 }
 drawParticles();
+
+// YouTube facade: load the player only when asked, and let chapter buttons jump to a time
+document.querySelectorAll(".yt").forEach((box) => {
+  const id = box.dataset.yt;
+  const chapters = box.closest(".feature").querySelectorAll(".chapters button");
+  const load = (t) => {
+    box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&start=${t}" title="HapticVLA project video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+    chapters.forEach((b) => b.classList.toggle("active", +b.dataset.t === t));
+  };
+  box.querySelector(".yt-play").addEventListener("click", () => load(0));
+  chapters.forEach((b) => b.addEventListener("click", () => load(+b.dataset.t)));
+});
