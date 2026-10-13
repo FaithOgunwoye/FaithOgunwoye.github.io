@@ -168,6 +168,7 @@
   <div class="news reveal">
     <h3 class="subsection-title">News</h3>
     <ul class="news-list">
+      <li><time datetime="2026-10">Oct 2026</time><span><em>JitterVLA</em> (first author) posted on arXiv; submitted to ACM/IEEE HRI 2027.</span></li>
       <li><time datetime="2026-09">Sep 2026</time><span><em>SmellDiffusion</em> (first author) and <em>HapticWAM</em> posted on arXiv; both under review at IEEE ICRA 2027.</span></li>
       <li><time datetime="2026-09">Sep 2026</time><span>Awarded the Skoltech Community Scholarship.</span></li>
       <li><time datetime="2026-07">Jul 2026</time><span><em>HapticVLA</em> received the Skoltech Top Paper Award.</span></li>
@@ -269,9 +270,22 @@
       <div class="pub-media"><div class="media-placeholder">🦾</div></div>
       <div class="pub-body">
         <h3>JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation</h3>
-        <p class="pub-meta">Submitted, ACM/IEEE HRI 2027 (Short Contributions)</p>
-        <p>Paired-replay benchmark evaluated on a real UR3 arm. Manuscript withheld during
-           double-blind review.</p>
+        <p class="pub-authors"><strong>Faith Ogunwoye</strong>, Didar Seyidov, Konstantin Gubernatorov, Dzmitry Tsetserukou</p>
+        <p class="pub-meta">First author · Submitted, ACM/IEEE HRI 2027 (Short Contributions) · 2026</p>
+        <p>VLA targets reach the robot controller late and irregularly, so a sensible action can still move
+           abruptly near people. JitterVLA replays identical commands and arrival traces through different
+           controllers: interpolation cut modelled p99 jerk by 83% at a 2.0 cm tracking cost, and lowered
+           measured jerk on a real UR3 in all six exploratory pairs.
+           <a href="https://arxiv.org/abs/2610.13628" target="_blank" rel="noopener">arXiv ↗</a>
+           · <a href="JitterVLA/" target="_blank" rel="noopener">Project page ↗</a></p>
+        <details class="bib"><summary>Cite</summary><pre><button type="button" class="copy-bib">Copy</button><code>@misc{ogunwoye2026jittervla,
+  title         = {JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation},
+  author        = {Ogunwoye, Faith and Seyidov, Didar and Gubernatorov, Konstantin and Tsetserukou, Dzmitry},
+  year          = {2026},
+  eprint        = {2610.13628},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2610.13628}
+}</code></pre></details>
       </div>
     </article>
 
