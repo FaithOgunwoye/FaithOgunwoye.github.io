@@ -301,6 +301,34 @@ footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--mute
 }
 .copy-bib:hover { border-color: var(--accent); color: var(--accent); }
 
+/* ============ awards ============ */
+.awards-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; }
+.award {
+  display: grid; grid-template-columns: 2.6rem 1fr; gap: 0.95rem; align-items: start;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.15rem 1.2rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
+}
+.award:hover { transform: translateY(-3px); box-shadow: 0 12px 30px var(--shadow); border-color: var(--hover-border); }
+.award-icon {
+  width: 2.6rem; height: 2.6rem; border-radius: 10px; display: grid; place-items: center;
+  background: var(--accent-dim); color: var(--accent);
+}
+.award-icon svg { width: 1.35rem; height: 1.35rem; }
+.award-kind {
+  display: flex; justify-content: space-between; gap: 0.6rem; align-items: baseline;
+  font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); flex-wrap: wrap;
+}
+.award-year { color: var(--accent); font-weight: 600; letter-spacing: 0.02em; white-space: nowrap; }
+.award h3 { color: var(--heading); font-size: 1rem; line-height: 1.35; margin: 0.25rem 0 0.2rem; }
+.award-issuer { font-size: 0.85rem; color: var(--muted); }
+.award-detail { font-size: 0.86rem; margin-top: 0.45rem; line-height: 1.55; }
+.award-body { min-width: 0; }
+.award:not(.featured) { grid-template-columns: 1fr; gap: 0.75rem; align-content: start; }
+.award:not(.featured) .award-icon { width: 2.2rem; height: 2.2rem; }
+.award:not(.featured) .award-icon svg { width: 1.15rem; height: 1.15rem; }
+.award.featured { grid-column: span 2; border-color: var(--hover-border); background: linear-gradient(135deg, var(--accent-dim), transparent 60%), var(--bg-card); }
+.award.featured h3 { font-size: 1.12rem; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
@@ -308,6 +336,9 @@ footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--mute
 }
 
 /* ============ responsive ============ */
+@media (max-width: 1020px) and (min-width: 861px) {
+  .awards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 860px) {
   .hero { padding: 6.5rem 1.2rem 4.5rem; }
   .hero-grid { grid-template-columns: 1fr; gap: 2.2rem; }
@@ -326,6 +357,8 @@ footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--mute
   #nav-toggle { display: block; }
   .nav-right { gap: 0.9rem; }
   .news-list li { grid-template-columns: 1fr; gap: 0; }
+  .awards-grid { grid-template-columns: 1fr; }
+  .award.featured { grid-column: auto; }
   #nav-links {
     position: absolute; top: 100%; right: 0; left: 0; margin: 0;
     flex-direction: column; align-items: center; gap: 1.2rem; padding: 1.5rem 0;
